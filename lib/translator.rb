@@ -3,12 +3,16 @@ require "yaml"
 def load_library(path)
   emoticons = YAML.load_file(path)
   
-  puts emoticons
+  #puts emoticons
   
   result = {}
   
   result["get_meaning"] = {}
   result["get_emoticon"] = {}
+  
+  emoticons.keys.each do |item|
+    result["get_meaning"][emoticons[item][1]] = item
+  end
 
   
   return result
