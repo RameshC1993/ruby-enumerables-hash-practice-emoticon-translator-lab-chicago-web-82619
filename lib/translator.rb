@@ -3,9 +3,13 @@ require "yaml"
 def load_library(path)
   emoticons = YAML.load_file(path)
   
+  result = {}
+  
+  result["get_meaning"] = {}
+  result["get_emoticon"] = {}
 
   
-  return {}
+  return result
 end
 
 def get_japanese_emoticon(path, emoticon)
