@@ -12,7 +12,9 @@ def load_library(path)
   
   emoticons.keys.each do |item|
     result["get_meaning"][emoticons[item][1]] = item
+    result["get_emoticon"][emoticons[item][0]] = emoticons[item][1]
   end
+  
 
   
   return result
